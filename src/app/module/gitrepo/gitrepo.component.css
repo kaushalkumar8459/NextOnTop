@@ -9,5 +9,10 @@
 .my-pagination /deep/ .ngx-pagination .current {
   background: green;
   border-radius: 5px;
+  text-align: center;
+}
+.my-pagination{
+  display: flex;
+  justify-content: center;
 }
 
