@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="table-responsive">
+    <h1 class="text-center">Git Repo Issue</h1>
+    <table class="table table-hover table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>S.No</th>
+          <th class="title">Issue title</th>
+          <th>user logged the issue</th>
+          <th>current state</th>
+          <th>created date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let repodata of repodatas | paginate:config,let i=index">
+          <td>{{(config.currentPage-1)*config.itemsPerPage+i+1}}</td>
+          <td>{{repodata.title}}</td>
+          <td>{{repodata.user.login|uppercase}}</td>
+          <td>{{repodata.state|uppercase}}</td>
+          <td>{{repodata.created_at}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="pagechange($event)" class="my-pagination"></pagination-controls>
+</div>

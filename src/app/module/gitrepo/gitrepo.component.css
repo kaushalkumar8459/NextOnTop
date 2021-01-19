@@ -1,0 +1,13 @@
+.table tr,
+.table td {
+  height: 75px;
+  text-align: center;
+}
+.title {
+  width: 500px;
+}
+.my-pagination /deep/ .ngx-pagination .current {
+  background: green;
+  border-radius: 5px;
+}
+
